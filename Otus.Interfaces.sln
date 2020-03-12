@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Interfaces", "Otus.Interfaces\Otus.Interfaces.csproj", "{88B030D0-23EC-4579-8E02-21BC896AD476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otus.Interfaces.Tests", "Otus.Interfaces.Tests\Otus.Interfaces.Tests.csproj", "{4988A380-D78B-48DD-AEC7-3CA55404B5F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B030D0-23EC-4579-8E02-21BC896AD476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B030D0-23EC-4579-8E02-21BC896AD476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B030D0-23EC-4579-8E02-21BC896AD476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B030D0-23EC-4579-8E02-21BC896AD476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4988A380-D78B-48DD-AEC7-3CA55404B5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4988A380-D78B-48DD-AEC7-3CA55404B5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4988A380-D78B-48DD-AEC7-3CA55404B5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4988A380-D78B-48DD-AEC7-3CA55404B5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
