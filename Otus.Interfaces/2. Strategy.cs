@@ -1,6 +1,6 @@
-using System.IO;
 using System.Xml;
-using System.Xml.Serialization;
+using ExtendedXmlSerializer;
+using ExtendedXmlSerializer.Configuration;
 
 namespace Otus.Interfaces
 {
@@ -11,15 +11,24 @@ namespace Otus.Interfaces
 
   public class OtusXmlSerializer : ISerializer
   {
+    private static readonly XmlWriterSettings XmlWriterSettings;
+
+    static OtusXmlSerializer()
+    {
+      XmlWriterSettings = new XmlWriterSettings {Indent = true};
+    }
+
     public string Serialize<T>(T item)
     {
-      using var sw = new StringWriter();
-      using var xw = XmlWriter.Create(sw);
+      // using a 3rd party serializer 'cause the default one cannot serialize interfaces
+      // https://github.com/ExtendedXmlSerializer/home
+      IExtendedXmlSerializer serializer = new ConfigurationContainer()
+        .UseAutoFormatting()
+        .UseOptimizedNamespaces()
+        .EnableImplicitTyping(typeof(T))
+        .Create();
 
-      var serializer = new XmlSerializer(typeof(T));
-      serializer.Serialize(xw, item);
-
-      return sw.ToString();
+      return serializer.Serialize(XmlWriterSettings, item);
     }
   }
 }
